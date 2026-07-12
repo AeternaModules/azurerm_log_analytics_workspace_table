@@ -1,3 +1,7 @@
+output "log_analytics_workspace_tables_id" {
+  description = "Map of id values across all log_analytics_workspace_tables, keyed the same as var.log_analytics_workspace_tables"
+  value       = { for k, v in azurerm_log_analytics_workspace_table.log_analytics_workspace_tables : k => v.id }
+}
 output "log_analytics_workspace_tables_name" {
   description = "Map of name values across all log_analytics_workspace_tables, keyed the same as var.log_analytics_workspace_tables"
   value       = { for k, v in azurerm_log_analytics_workspace_table.log_analytics_workspace_tables : k => v.name }
