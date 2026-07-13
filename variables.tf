@@ -13,7 +13,7 @@ EOT
   type = map(object({
     name                    = string
     workspace_id            = string
-    plan                    = optional(string) # Default: "Analytics"
+    plan                    = optional(string)
     retention_in_days       = optional(number)
     total_retention_in_days = optional(number)
   }))
